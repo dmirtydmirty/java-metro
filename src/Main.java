@@ -5,8 +5,8 @@ class Main {
     public static void main(String[] args) {
         MetroSystem metroSystem = InitMs.initSpbMetro();
 
-        Station start = metroSystem.getLines().get(2).getStations().getFirst();
-        Station finish = metroSystem.getLines().getFirst().getStations().get(2);
+        Station start = metroSystem.getStationByName("Площадь мужества");
+        Station finish = metroSystem.getStationByName("Парная");
 
         // Создание путешественника
         Traveler traveler1 = new Traveler("Путешественник 1", start);

@@ -76,8 +76,8 @@ public class InitMs {
         Station stationBalt = new Station("Балтийская", 7, 10);
         Station stationTI1 = new Station("Т. И. 1", 12, 12);
         Station stationPush = new Station("Пушкинская", 17, 12);
-        Station stationVlad = new Station("Влидимирская", 17, 16);
-        Station stationPV = new Station("Площадь восстания", 18, 18);
+        Station stationVlad = new Station("Влидимирская", 17, 17);
+        Station stationPV = new Station("Площадь восстания", 18, 19);
         Station stationChern = new Station("Чернышевская", 19, 22);
         Station stationPL = new Station("Площадь ленина", 19, 23);
         Station stationVib = new Station("Выборгская", 19, 24);
@@ -95,9 +95,9 @@ public class InitMs {
         Station stationElec = new Station("Электросила", 12, 7);
         Station stationMV = new Station("Фрунзенская", 12, 10);
         Station stationFR = new Station("Московские ворота", 12, 9);
-        Station stationTI2 = new Station("Т. И. 2", 13, 12);
+        Station stationTI2 = new Station("Т. И. 2", 12, 13);
         Station stationSen = new Station("Сенная", 12, 15);
-        Station stationNP = new Station("Невский проспект", 12, 18);
+        Station stationNP = new Station("Невский проспект", 12, 19);
         Station stationGor = new Station("Горьковская", 12, 22);
         Station stationPetr = new Station("Петроградская", 12, 23);
         Station stationChR = new Station("Черная речка", 12, 24);
@@ -133,8 +133,8 @@ public class InitMs {
         Station stationBol = new Station("Проспект большивиков", 28, 8);
         Station stationLad = new Station("Ладожская", 28, 10);
         Station stationNov = new Station("Новочеркасская", 28, 12);
-        Station stationPAN2 = new Station("Площадь А. Невского 2", 23, 16);
-        Station stationLig = new Station("Лиговский проспект", 19, 16);
+        Station stationPAN2 = new Station("Площадь А. Невского 2", 23, 15);
+        Station stationLig = new Station("Лиговский проспект", 19, 15);
         Station stationDost = new Station("Достоевская", 18, 16);
         Station stationSpas = new Station("Спасская", 13, 16);
 
@@ -221,6 +221,8 @@ public class InitMs {
         metroSystem.addCross(new Cross(lineB, stationSen, lineP, stationSad));
         metroSystem.addCross(new Cross(lineP, stationSad, lineO, stationSpas));
         metroSystem.addCross(new Cross(lineO, stationSpas, lineB,stationSen));
+        metroSystem.addCross(new Cross(lineG, stationPAN1, lineO,stationPAN2));
+        metroSystem.addCross(new Cross(lineR, stationVlad, lineO,stationDost));
 
         return metroSystem;
     }

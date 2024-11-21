@@ -8,6 +8,17 @@ public class MetroSystem {
     int width;
     int height;
 
+    Station getStationByName(String name){
+        for (Line l : lines){
+            for (Station s: l.getStations()){
+                if (s.name == name) {
+                    return s;
+                }
+            }
+        }
+        return lines.getFirst().getStations().getFirst();
+    }
+
     MetroSystem(int w, int h) {
         lines = new ArrayList<>();
         crosses = new ArrayList<>();
