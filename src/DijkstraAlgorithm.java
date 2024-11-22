@@ -41,9 +41,7 @@ public class DijkstraAlgorithm {
     private List<Station> getAllStations() {
         List<Station> all = new ArrayList<>();
         for (Line l: ms.getLines()){
-            for (Station s : l.getStations()){
-                all.add(s);
-            }
+            all.addAll(l.getStations());
         }
         return all;
     }

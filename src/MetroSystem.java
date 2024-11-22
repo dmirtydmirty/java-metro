@@ -1,17 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MetroSystem {
-    private List<Line> lines;
-    private List<Cross> crosses;
-    private List<Station> path;
+    private final List<Line> lines;
+    private final List<Cross> crosses;
+    private final List<Station> path;
     int width;
     int height;
 
     Station getStationByName(String name){
         for (Line l : lines){
             for (Station s: l.getStations()){
-                if (s.name == name) {
+                if (Objects.equals(s.name, name)) {
                     return s;
                 }
             }
